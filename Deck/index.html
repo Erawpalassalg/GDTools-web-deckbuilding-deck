@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>GDTools web - Deck</title>
+    <link rel="stylesheet" href="style.css" />
+    <!--<link rel="icon" href="images/favicon.png" />-->
+  </head>
+
+  <body>
+    <main>
+      <section class="cards-input">
+        <textarea rows="5"></textarea>
+        <small class="text-muted">One card per line</small>
+        <button class="start-deck">Start</button>
+      </section>
+      <section class="cards-display">
+        <section class="draw-pile">
+          <img src="https://icons.iconarchive.com/icons/icons-land/metro-raster-sport/72/Casino-Playing-Cards-icon.png"/>
+          <small class="text-muted counter">0</small>
+          <small class="text-muted">click to draw</small>
+        </section>
+        <section class="hand">
+          <section class="cards-container"></section>
+          <small class="text-muted">click on cards to discard them</small>
+        </section>
+        <section class="discard-pile">
+          <img src="https://icons.iconarchive.com/icons/icons-land/metro-raster-sport/72/Casino-Playing-Cards-icon.png"/>
+          <small class="text-muted counter">0</small>
+        </section>
+      </section>
+    </main>
+    <script src="scripts.js"></script>
+  </body>
+</html>

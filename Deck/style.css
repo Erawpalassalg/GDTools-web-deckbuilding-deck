@@ -1,0 +1,74 @@
+/*Main*/
+
+main {
+  width; 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+
+/*Cards input */
+
+.cards-input {
+  width: 80%;
+  margin: 2em auto;
+}
+
+.cards-input > * {
+  display: block;
+}
+
+.cards-input > textarea {
+  width: 100%;
+  /*margin: 0 auto;*/
+}
+
+.cards-input > button {
+  margin-top: 1em;
+}
+
+
+/*Card display*/
+
+.cards-display {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: flex-start;
+
+  margin: 2em 0;
+}
+
+.hand {
+  flex-grow: 1;
+  text-align: center;
+}
+
+
+.draw-pile > *, .discard-pile > * {
+  display: block;
+}
+
+/* Card */
+.card-element {
+  width: 150px;
+  height: 200px;
+  padding: 10px;
+  border-radius: 5px;
+  display: inline-block;
+  border: 1px solid black;
+  overflow: scroll;
+  margin: 0 5px;
+}
+
+
+/* Generic */
+.text-muted {
+  color: gray;
+}
+
+.counter {
+  width: 100%;
+  text-align: center;
+}
