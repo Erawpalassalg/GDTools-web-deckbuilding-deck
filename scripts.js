@@ -53,7 +53,6 @@ const updatePileCount = pile => {
 
 // Hand functions
 const drawCard = () => {
-  if(DRAW_PILE.cards.length === 0) shuffleDiscardPileIntoDrawPile();
   if(DRAW_PILE.cards.length === 0) return;
 
   const card = DRAW_PILE.cards[0];
@@ -74,9 +73,9 @@ const discardCard = card => {
 const shuffleDiscardPileIntoDrawPile = () => {
   if (DISCARD_PILE.cards.length === 0) return;
 
+  shuffleArray(DISCARD_PILE.cards);
   DRAW_PILE.cards = DRAW_PILE.cards.concat(DISCARD_PILE.cards);
   DISCARD_PILE.cards = [];
-  shuffleArray(DRAW_PILE.cards);
   updatePileCount(DRAW_PILE);
   updatePileCount(DISCARD_PILE);
 }
@@ -102,6 +101,10 @@ const start = () => {
 
 DRAW_PILE.element.addEventListener("click", ev => {
   drawCard();
+});
+
+DISCARD_PILE.element.addEventListener("click", ev => {
+  shuffleDiscardPileIntoDrawPile();
 });
 
 
