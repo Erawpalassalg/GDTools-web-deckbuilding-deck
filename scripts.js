@@ -74,9 +74,7 @@ const discardCard = card => {
 const shuffleDiscardPileIntoDrawPile = () => {
   if (DISCARD_PILE.cards.length === 0) return;
 
-  console.log(DRAW_PILE.cards, DISCARD_PILE.cards)
   DRAW_PILE.cards = DRAW_PILE.cards.concat(DISCARD_PILE.cards);
-  console.log(DRAW_PILE.cards, DISCARD_PILE.cards)
   DISCARD_PILE.cards = [];
   shuffleArray(DRAW_PILE.cards);
   updatePileCount(DRAW_PILE);
