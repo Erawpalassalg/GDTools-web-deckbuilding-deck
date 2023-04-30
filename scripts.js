@@ -59,15 +59,12 @@ const drawCard = () => {
   removeCardFromPile(card, DRAW_PILE);
   HAND.cards.push(card);
   HAND.element.replaceChildren(...HAND.cards);
-
-  if(DRAW_PILE.cards.length === 0) shuffleDiscardPileIntoDrawPile();
 }
 
 const discardCard = card => {
   HAND.cards = HAND.cards.filter(currCard => currCard != card);
   HAND.element.replaceChildren(...HAND.cards);
   addCardToPile(card, DISCARD_PILE);
-  if (HAND.cards.length === 0 && DRAW_PILE.cards.length === 0) shuffleDiscardPileIntoDrawPile();
 }
 
 const shuffleDiscardPileIntoDrawPile = () => {
