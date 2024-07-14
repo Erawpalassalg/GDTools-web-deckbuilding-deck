@@ -28,6 +28,7 @@ const reset = () => {
   DISCARD_PILE.cards = [];
   updatePileCount(DISCARD_PILE);
   HAND.cards = [];
+  HAND.element.replaceChildren(...HAND.cards);
 }
 
 const makeCardElement = cardText => {
