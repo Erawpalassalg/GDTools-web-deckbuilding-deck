@@ -24,7 +24,9 @@ CARD_ELEMENT.classList.add("card-element");
 // Pile functions
 const reset = () => {
   DRAW_PILE.cards = [];
+  updatePileCount(DRAW_PILE);
   DISCARD_PILE.cards = [];
+  updatePileCount(DISCARD_PILE);
   HAND.cards = [];
 }
 
